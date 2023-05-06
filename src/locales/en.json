@@ -1,6 +1,15 @@
 {
   "Email": "Email",
   "Password": "Password",
-  "Email-Placeholder": "Email...",
-  "Password-Placeholder": "Password..."
+  "Email-Placeholder-Login": "Email...",
+  "Password-Placeholder-Login": "Password...",
+  "Name": "Name",
+  "Surename": "Surename",
+  "Age": "Age",
+  "Email-Placeholder-Register": "New Email",
+  "Password-Placeholder-Register": "New Password",
+  "Repeat-Password-Placeholder-Register": "Repeat Password",
+  "Login": "Login",
+  "Register": "Register",
+  "Language": "Language"
 }

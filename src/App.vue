@@ -4,6 +4,18 @@
 <script>
 export default {
   name: "App",
+  data() {
+    return {
+      authenticated: false,
+    };
+  },
+  mounted() {
+    if (!this.authenticated) {
+      this.$router.push("/login");
+    } else {
+      this.$router.push("/");
+    }
+  },
 };
 </script>
 <style>

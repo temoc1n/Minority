@@ -17,15 +17,17 @@
 }
 
 
+
 .login-page {
     overflow: hidden;
 }
 
+
 .login-form {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height:100vh;
 }
 
 .image-background-login {
@@ -38,6 +40,15 @@
 .authentication:focus {
     border-color: rgb(0, 0, 0);
 }
+
+
+
+.language-menu {
+    max-height: 150px;
+    overflow: scroll;
+}
+
+
 
 
 

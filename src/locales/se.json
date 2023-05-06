@@ -1,0 +1,15 @@
+{
+    "Email": "E-post",
+    "Password": "Lösenord",
+    "Email-Placeholder-Login": "E-post…",
+    "Password-Placeholder-Login": "Lösenord…",
+    "Name": "Namn",
+    "Surename": "Efternamn",
+    "Age": "Ålder",
+    "Email-Placeholder-Register": "Ny e-post",
+    "Password-Placeholder-Register": "Nytt lösenord",
+    "Repeat-Password-Placeholder-Register": "Upprepa lösenord",
+    "Login": "Logga in",
+    "Register": "Registrera",
+    "Language": "Språk"
+}

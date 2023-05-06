@@ -24,24 +24,24 @@
               </div>
               <div class="form mt-4">
                 <label for="email" class="authentication">{{
-                  $t("Email")
+                  $t("Email-Placeholder-Register")
                 }}</label>
                 <div class="input-group mb-3 gap-3 ps-3 pe-3">
                   <input
                     type="text"
-                    :placeholder="$t('Email-Placeholder-Login')"
+                    :placeholder="$t('Email-Placeholder-Register')"
                     class="form-control authentication"
                     :class="lang == 'ara' ? 'text-end' : 'text-start'"
                     id="email"
                   />
                 </div>
                 <label for="password" class="authentication mt-3">{{
-                  $t("Password")
+                  $t("Password-Placeholder-Register")
                 }}</label>
                 <div class="input-group mb-3 gap-3 ps-3 pe-3">
                   <input
                     type="text"
-                    :placeholder="$t('Password-Placeholder-Login')"
+                    :placeholder="$t('Password-Placeholder-Register')"
                     class="form-control authentication mb-3"
                     :class="lang == 'ara' ? 'text-end' : 'text-start'"
                     id="password"
@@ -57,7 +57,6 @@
                   <button
                     type="button"
                     class="btn btn-outline-info w-25 overflow-hidden"
-                    @click="this.$router.push('/register')"
                   >
                     {{ $t("Register") }}
                   </button>
@@ -80,7 +79,7 @@ export default {
   data() {
     return {
       image: undefined,
-      lang: "en",
+      lang: this.$i18n.locale,
     };
   },
   watch: {

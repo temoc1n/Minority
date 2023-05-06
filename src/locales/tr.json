@@ -1,0 +1,15 @@
+{
+    "Email": "E-posta",
+    "Password": "Şifre",
+    "Email-Placeholder-Login": "E-posta...",
+    "Password-Placeholder-Login": "Şifre...",
+    "Name": "İsim",
+    "Surename": "Soyisim",
+    "Age": "Yaş",
+    "Email-Placeholder-Register": "Yeni E-Posta",
+    "Password-Placeholder-Register": "Yeni Şifre",
+    "Repeat-Password-Placeholder-Register": "Şifreyi Tekrarla",
+    "Login": "Giriş Yap",
+    "Register": "Kayıt Ol",
+    "Language": "Dil"
+}

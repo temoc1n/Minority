@@ -1,6 +1,15 @@
 {
-  "Email": "بريد إلكتروني",
-  "Password": "كلمة المرور",
-  "Email-Placeholder": "بريد إلكتروني",
-  "Password-Placeholder": "كلمة المرور"
+    "Email": "البريد الإلكتروني",
+    "Password": "كلمة المرور",
+    "Email-Placeholder-Login": "البريد الإلكتروني",
+    "Password-Placeholder-Login": "كلمة المرور",
+    "Name": "الاسم",
+    "Surename": "الكنية",
+    "Age": "العمر",
+    "Email-Placeholder-Register": "بريد إلكتروني جديد",
+    "Password-Placeholder-Register": "كلمة مرور جديدة",
+    "Repeat-Password-Placeholder-Register": "تأكيد كلمة المرور",
+    "Login": "تسجيل الدخول",
+    "Register": "تسجيل",
+    "Language": "اللغة"
 }
