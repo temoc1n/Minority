@@ -8,4 +8,5 @@ export default {
 </script>
 <style>
 @import url("/node_modules/bootstrap");
+@import url("./assets/style.css");
 </style>

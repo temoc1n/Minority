@@ -1,0 +1,15 @@
+.login-page {
+    overflow: hidden;
+}
+
+.image-background-login {
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .image-background-login {
+        display: hidden !important;
+    }
+}
