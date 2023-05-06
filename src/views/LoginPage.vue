@@ -17,20 +17,24 @@
               <p>Connect. Share. Empower</p>
             </div>
             <div class="form mt-4">
-              <label for="email" class="text-start authentication">Email</label>
+              <label for="email" class="text-start authentication">{{
+                $t("Email")
+              }}</label>
               <div class="input-group mb-3 gap-3 ps-3 pe-3">
                 <input
                   type="text"
-                  placeholder="Email..."
+                  :placeholder="$t('Email-Placeholder')"
                   class="form-control authentication"
                   id="email"
                 />
               </div>
-              <label for="password" class="authentication mt-3">Password</label>
+              <label for="password" class="authentication mt-3">{{
+                $t("Password")
+              }}</label>
               <div class="input-group mb-3 gap-3 ps-3 pe-3">
                 <input
                   type="text"
-                  placeholder="Password..."
+                  :placeholder="$t('Password-Placeholder')"
                   class="form-control authentication mb-3"
                   id="password"
                 />
@@ -70,6 +74,9 @@ export default {
     ];
     const index_number = Math.floor(Math.random() * images.length);
     this.image = "url(" + images[index_number] + ")";
+    ///
+
+    this.$i18n.locale = "en";
   },
 };
 </script>
