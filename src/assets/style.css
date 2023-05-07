@@ -41,6 +41,10 @@
     border-color: rgb(0, 0, 0);
 }
 
+.border_not_eq_passwd, .border_not_eq_passwd:focus {
+    border-color: rgb(255, 0, 0);
+}
+
 
 
 .language-menu {

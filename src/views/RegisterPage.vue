@@ -15,36 +15,68 @@
           @ChangeLanguage="(language) => (this.lang = language)"
         />
         <!-- Main Board -->
-        <div class="login-form">
+        <div class="login-form form">
           <div class="border rounded-5 text-center">
+            <div class="position-relative">
+              <p class="position-absolute" v-if="not_eq_passwd">
+                {{ $t("Passwd_dont_match") }}
+              </p>
+            </div>
             <div class="login">
               <div class="header-login mt-5">
                 <h1>Minorify</h1>
                 <p>Connect. Share. Empower.</p>
+                {{ not_eq_passwd }}
               </div>
               <div class="form mt-4">
-                <label for="email" class="authentication">{{
-                  $t("Email-Placeholder-Register")
-                }}</label>
+                <div class="name d-flex">
+                  <div class="input-group mb-3 gap-3 ps-3 pe-3">
+                    <input
+                      type="text"
+                      :placeholder="$t('Name')"
+                      class="form-control authentication"
+                      :class="lang == 'ara' ? 'text-end' : 'text-start'"
+                      id="name"
+                    />
+                  </div>
+                  <div class="input-group mb-3 gap-3 ps-3 pe-3">
+                    <input
+                      type="text"
+                      :placeholder="$t('Surename')"
+                      class="form-control authentication"
+                      :class="lang == 'ara' ? 'text-end' : 'text-start'"
+                      id="surename"
+                    />
+                  </div>
+                </div>
                 <div class="input-group mb-3 gap-3 ps-3 pe-3">
                   <input
-                    type="text"
+                    type="email"
                     :placeholder="$t('Email-Placeholder-Register')"
                     class="form-control authentication"
                     :class="lang == 'ara' ? 'text-end' : 'text-start'"
                     id="email"
                   />
                 </div>
-                <label for="password" class="authentication mt-3">{{
-                  $t("Password-Placeholder-Register")
-                }}</label>
                 <div class="input-group mb-3 gap-3 ps-3 pe-3">
                   <input
-                    type="text"
+                    type="password"
+                    v-model="password"
                     :placeholder="$t('Password-Placeholder-Register')"
                     class="form-control authentication mb-3"
                     :class="lang == 'ara' ? 'text-end' : 'text-start'"
                     id="password"
+                  />
+                  <input
+                    type="password"
+                    v-model="re_password"
+                    :placeholder="$t('Repeat-Password-Placeholder-Register')"
+                    class="form-control authentication mb-3"
+                    :class="
+                      (lang == 'ara' ? 'text-end' : 'text-start',
+                      !not_eq_passwd ? '' : 'border_not_eq_passwd')
+                    "
+                    id="re-password"
                   />
                 </div>
                 <div class="validation mb-3">
@@ -80,9 +112,22 @@ export default {
     return {
       image: undefined,
       lang: this.$i18n.locale,
+      not_eq_passwd: false,
+      name: undefined,
+      surename: undefined,
+      email: undefined,
+      password: undefined,
+      re_password: undefined,
     };
   },
   watch: {
+    re_password() {
+      if (this.re_password !== this.password) {
+        this.not_eq_passwd = true;
+      } else {
+        this.not_eq_passwd = false;
+      }
+    },
     lang() {
       this.$i18n.locale = this.lang;
     },
