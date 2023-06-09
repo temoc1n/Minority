@@ -52,7 +52,7 @@
                     type="button"
                     class="btn btn-outline-info me-4 w-25 overflow-hidden"
                   >
-                    {{ $t("Login") }}
+                    {{ $t("Continue") }}
                   </button>
                   <button
                     type="button"
@@ -66,16 +66,19 @@
             </div>
           </div>
         </div>
+        <FooterLogin />
       </div>
     </div>
   </div>
 </template>
 <script>
 import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
+import FooterLogin from "@/components/LoginComponents/FooterLogin.vue";
 export default {
   name: "LoginPage",
   components: {
-    LanguageSwitcher: LanguageSwitcher,
+    LanguageSwitcher,
+    FooterLogin,
   },
   data() {
     return {

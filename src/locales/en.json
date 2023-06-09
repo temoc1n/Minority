@@ -11,6 +11,7 @@
   "Repeat-Password-Placeholder-Register": "Repeat Password",
   "Login": "Login",
   "Register": "Register",
+  "Continue": "Continue",
   "Language": "Language",
   "Passwd_dont_match": "Password do not match"
 }

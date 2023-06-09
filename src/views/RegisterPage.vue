@@ -26,7 +26,6 @@
               <div class="header-login mt-5">
                 <h1>Minorify</h1>
                 <p>Connect. Share. Empower.</p>
-                {{ not_eq_passwd }}
               </div>
               <div class="form mt-4">
                 <div class="name d-flex">
@@ -83,6 +82,7 @@
                   <button
                     type="button"
                     class="btn btn-outline-info me-4 w-25 overflow-hidden"
+                    @click="$router.push('/login')"
                   >
                     {{ $t("Login") }}
                   </button>
@@ -90,23 +90,26 @@
                     type="button"
                     class="btn btn-outline-info w-25 overflow-hidden"
                   >
-                    {{ $t("Register") }}
+                    {{ $t("Continue") }}
                   </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <FooterLogin />
       </div>
     </div>
   </div>
 </template>
 <script>
 import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
+import FooterLogin from "@/components/LoginComponents/FooterLogin.vue";
 export default {
   name: "LoginPage",
   components: {
-    LanguageSwitcher: LanguageSwitcher,
+    LanguageSwitcher,
+    FooterLogin,
   },
   data() {
     return {

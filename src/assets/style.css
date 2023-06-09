@@ -45,6 +45,10 @@
     border-color: rgb(255, 0, 0);
 }
 
+.footer_text {
+    font-size:smaller;
+}
+
 
 
 .language-menu {
